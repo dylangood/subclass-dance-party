@@ -5,7 +5,6 @@ ColorDancer.prototype = Object.create(Dancer.prototype);
 ColorDancer.prototype.constructor = ColorDancer;
 
 ColorDancer.prototype.step = function(){
-  //debugger;
   this.$node.toggleClass('colorful');
-  setTimeout(this.step.bind(this), this.timeBetweenSteps);
+  Dancer.prototype.step.call(this);
 };

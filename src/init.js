@@ -19,8 +19,7 @@ $(document).ready(function() {
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
-    console.log(dancerMakerFunction, 'dancerMakerFunction');
-    console.log(dancerMakerFunctionName, 'dancerMakerFunctionName');
+
     // make a dancer with a random position
     if (dancerMakerFunctionName === 'makeBlinkyDancer'){
       var dancer = new BlinkyDancer(
