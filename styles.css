@@ -28,7 +28,8 @@ body, a:link, a:visited, a:active{
 }
 
 .shape{
-  border-radius:1px;
+  border-radius:0;
+
 }
 
 .colorful{
