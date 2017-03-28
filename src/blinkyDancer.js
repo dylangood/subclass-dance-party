@@ -8,7 +8,7 @@ BlinkyDancer.prototype.constructor = BlinkyDancer;
 //   this.$node.toggle();
 // };
 
-BlinkyDancer.prototype.step = function(){
+BlinkyDancer.prototype.dubstep = function(){
   //debugger;
   this.$node.toggle();
   this.step.bind(this);
