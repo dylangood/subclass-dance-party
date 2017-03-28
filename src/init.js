@@ -2,6 +2,7 @@ $(document).ready(function() {
   window.dancers = [];
 
   $('.addDancerButton').on('click', function(event) {
+    for (var i = 0; i < 20; i++){
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -35,5 +36,26 @@ $(document).ready(function() {
       var dancer = new ColorDancer(yPosition, xPosition, halfPeriod);
     }
     $('body').append(dancer.$node);
+  }
+  });
+
+  $('.lineUpDancersButton').on('click', function(event){
+    var allDancers = document.getElementsByClassName('dancer');
+    var separation = (400 * 4 * Math.PI) / 180 / allDancers.length;
+    var center = [$('body').width() / 2, $('body').height() / 2];
+    var move = function(toX, toY, steps){
+
+    }
+    for (var i = 0; i < allDancers.length; i++){
+      var t = i * separation;
+      var R = Math.pow(i * separation, 2);
+      var x = R * Math.cos(t) + center[0];
+      var y = R * Math.sin(t) + center[1];
+      allDancers[i].goal = [x,y];
+      allDancers[i].animate(allDancers[i].goal);
+      allDancers[i].animate(allDancers[i].goal);
+      allDancers[i].style.top = y.toString() + 'px';
+      allDancers[i].style.left = x.toString() + 'px';
+    }
   });
 });
