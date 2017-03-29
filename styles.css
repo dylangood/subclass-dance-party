@@ -23,6 +23,13 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 
+.quantifier{
+  height: auto;
+  width: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 .dancer{
   border:10px solid red;
   border-radius:10px;
