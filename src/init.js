@@ -4,7 +4,9 @@ $(document).ready(function() {
   $('.quantifier').attr('value', '50');
   $('.quantifier').attr('min','1');
   $('.quantifier').attr('step', '10');
-//  $('.quantifier').defaultValue = '30';
+  $('.moveTime').attr('value', '2001');
+  $('.moveTime').attr('min', '500');
+  $('.moveTime').attr('step', '500');
 
   $('.addDancerButton').on('click', function(event) {
     var quantifier = 1.0 * $('.quantifier')[0].value;
@@ -32,6 +34,8 @@ $(document).ready(function() {
     }
   });
 
-  $('.lineUpDancersButton').on('click', lineUpDancers);
-  
+  $('.lineUpDancersButton').on('click', function() {
+    var moveTime = 1.0 * $('.moveTime')[0].value;
+    lineUpDancers(moveTime);
+  });
 });
